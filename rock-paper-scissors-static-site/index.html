@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rock Paper Scissors - Player vs Player (static)</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Rock · Paper · Scissors — Player vs Player</h1>
+
+        <section id="pick-section">
+            <p id="pick-instructions">Pick your move to start (this generates a link to send to your opponent):</p>
+            <div class="choices">
+                <button class="choice-button" data-choice="rock">✊ Rock</button>
+                <button class="choice-button" data-choice="paper">✋ Paper</button>
+                <button class="choice-button" data-choice="scissors">✌️ Scissors</button>
+            </div>
+            <div id="share-area" class="hidden">
+                <p>Share this link with your friend:</p>
+                <input id="share-link" readonly />
+                <div class="share-actions">
+                    <button id="copy-link">Copy link</button>
+                    <button id="open-link" title="Open link in a new tab">Open link</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="opponent-section" class="hidden">
+            <p id="opponent-instructions"></p>
+            <div id="opponent-choices" class="choices">
+                <button class="choice-button-opponent" data-choice="rock">✊ Rock</button>
+                <button class="choice-button-opponent" data-choice="paper">✋ Paper</button>
+                <button class="choice-button-opponent" data-choice="scissors">✌️ Scissors</button>
+            </div>
+        </section>
+
+        <section id="result-section" class="hidden">
+            <h2>Result</h2>
+            <p id="result-text"></p>
+            <div class="result-choices">
+                <span id="player1-choice"></span>
+                <span id="player2-choice"></span>
+            </div>
+            <div class="result-actions">
+                <button id="play-again">Start over</button>
+            </div>
+        </section>
+
+        <p class="note">No backend — all choices live in the URL query string.</p>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

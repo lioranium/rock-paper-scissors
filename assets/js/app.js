@@ -191,7 +191,7 @@ playAgainBtn.addEventListener('click', ()=>{
             const p1 = await decryptTextWithKey(keyObj, decodeURIComponent(cipher), decodeURIComponent(iv));
             pickSection.classList.add('hidden');
             opponentSection.classList.remove('hidden');
-            opponentInstructions.textContent = `Player 1 already picked: ${p1}. Choose your move:`;
+            opponentInstructions.textContent = `Player 1 already picked! Choose your move:`;
         }catch(e){
             // decryption failed
             pickSection.classList.add('hidden');
